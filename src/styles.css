@@ -168,7 +168,7 @@
 /* Solo mobile: iOS/Android zoomano automaticamente lo schermo quando un campo
    di testo ha font-size sotto i 16px al momento del focus. Questa regola
    forza 16px SOLO sotto i 768px, quindi il desktop non cambia di un pixel. */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   input,
   textarea,
   select {
