@@ -15,12 +15,12 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/checkout")({
   head: () => ({
     meta: [
-      { title: "Checkout sicuro — Notte" },
+      { title: "Checkout sicuro — PitStore" },
       {
         name: "description",
         content: "Completa il tuo ordine: dati di spedizione, fatturazione e pagamento sicuro.",
       },
-      { property: "og:title", content: "Checkout sicuro — Notte" },
+      { property: "og:title", content: "Checkout sicuro — PitStore" },
       { property: "og:description", content: "Pagamento protetto con carta o PayPal." },
       { name: "robots", content: "noindex" },
     ],

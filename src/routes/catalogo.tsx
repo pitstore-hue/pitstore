@@ -6,16 +6,16 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/catalogo")({
   head: () => ({
     meta: [
-      { title: "Catalogo — Notte" },
+      { title: "Catalogo — PitStore" },
       {
         name: "description",
         content:
-          "Il catalogo Notte: proiettore USB effetto cielo stellato, cornici luminose Dragon Ball e altri prodotti.",
+          "Il catalogo PitStore: proiettore USB effetto cielo stellato, cornici luminose Dragon Ball e altri prodotti.",
       },
-      { property: "og:title", content: "Catalogo — Notte" },
+      { property: "og:title", content: "Catalogo — PitStore" },
       {
         property: "og:description",
-        content: "Scopri i prodotti Notte e scegli la variante che preferisci.",
+        content: "Scopri i prodotti PitStore e scegli la variante che preferisci.",
       },
     ],
   }),

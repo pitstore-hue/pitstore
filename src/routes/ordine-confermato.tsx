@@ -7,9 +7,9 @@ export const Route = createFileRoute("/ordine-confermato")({
   }),
   head: () => ({
     meta: [
-      { title: "Ordine confermato — Notte" },
+      { title: "Ordine confermato — PitStore" },
       { name: "description", content: "Grazie! Il tuo ordine è stato registrato." },
-      { property: "og:title", content: "Ordine confermato — Notte" },
+      { property: "og:title", content: "Ordine confermato — PitStore" },
       { property: "og:description", content: "Il tuo ordine è stato registrato." },
       { name: "robots", content: "noindex" },
     ],

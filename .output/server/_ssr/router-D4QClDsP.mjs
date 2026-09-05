@@ -90,7 +90,7 @@ var formatPrice = (value) => new Intl.NumberFormat("it-IT", {
 	currency: "EUR"
 }).format(value);
 var CartContext = (0, import_react.createContext)(null);
-var STORAGE_KEY = "notte-cart";
+var STORAGE_KEY = "PitStore-cart";
 var lineKey = (slug, variantId) => `${slug}::${variantId ?? ""}`;
 function CartProvider({ children }) {
 	const [lines, setLines] = (0, import_react.useState)([]);
@@ -333,7 +333,7 @@ function SiteHeader() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
 					to: "/",
 					className: "font-display text-lg tracking-tight",
-					children: ["Notte", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					children: ["PitStore", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 						className: "text-primary",
 						children: "."
 					})]
@@ -384,7 +384,7 @@ function SiteFooter() {
 			className: "container-page flex flex-col gap-6 md:flex-row md:items-center md:justify-between",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 				className: "font-display text-lg",
-				children: ["Notte", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				children: ["PitStore", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					className: "text-primary",
 					children: "."
 				})]
@@ -416,7 +416,7 @@ function SiteFooter() {
 			children: [
 				"© ",
 				(/* @__PURE__ */ new Date()).getFullYear(),
-				" Notte — Spedizione gratuita da 100 €. Reso entro 14 giorni."
+				" PitStore — Spedizione gratuita da 40 €. Reso entro 14 giorni."
 			]
 		})]
 	});
@@ -509,18 +509,18 @@ var Route$6 = createRootRouteWithContext()({
 				name: "viewport",
 				content: "width=device-width, initial-scale=1"
 			},
-			{ title: "Notte — Lampade da comodino" },
+			{ title: "PitStore — Lampade da comodino" },
 			{
 				name: "description",
 				content: "Lampade da notte per comodino, design italiano."
 			},
 			{
 				name: "author",
-				content: "Notte"
+				content: "PitStore"
 			},
 			{
 				property: "og:title",
-				content: "Notte — Lampade da comodino"
+				content: "PitStore — Lampade da comodino"
 			},
 			{
 				property: "og:description",
@@ -595,14 +595,14 @@ function RootComponent() {
 var $$splitComponentImporter$5 = () => import("./routes-BmMR4Chp.mjs");
 var Route$5 = createFileRoute("/")({
 	head: () => ({ meta: [
-		{ title: "Notte — Lampade da comodino di design" },
+		{ title: "PitStore — Lampade da comodino di design" },
 		{
 			name: "description",
 			content: "Lampade da notte per comodino: ceramica, ottone, legno e vetro. Spedizione gratuita da 100 €, pagamento con carta e PayPal."
 		},
 		{
 			property: "og:title",
-			content: "Notte — Lampade da comodino di design"
+			content: "PitStore — Lampade da comodino di design"
 		},
 		{
 			property: "og:description",
@@ -614,18 +614,18 @@ var Route$5 = createFileRoute("/")({
 var $$splitComponentImporter$4 = () => import("./catalogo-DwUKIsVO.mjs");
 var Route$4 = createFileRoute("/catalogo")({
 	head: () => ({ meta: [
-		{ title: "Catalogo — Notte" },
+		{ title: "Catalogo — PitStore" },
 		{
 			name: "description",
-			content: "Il catalogo Notte: proiettore USB effetto cielo stellato con varianti da 3, 6, 12 e 24 pezzi. Altri due prodotti in arrivo."
+			content: "Il catalogo PitStore: proiettore USB effetto cielo stellato con varianti da 3, 6, 12 e 24 pezzi. Altri due prodotti in arrivo."
 		},
 		{
 			property: "og:title",
-			content: "Catalogo — Notte"
+			content: "Catalogo — PitStore"
 		},
 		{
 			property: "og:description",
-			content: "Scopri i prodotti Notte e scegli la confezione che preferisci."
+			content: "Scopri i prodotti PitStore e scegli la confezione che preferisci."
 		}
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
@@ -633,14 +633,14 @@ var Route$4 = createFileRoute("/catalogo")({
 var $$splitComponentImporter$3 = () => import("./checkout-Bx5Q0l0G.mjs");
 var Route$3 = createFileRoute("/checkout")({
 	head: () => ({ meta: [
-		{ title: "Checkout sicuro — Notte" },
+		{ title: "Checkout sicuro — PitStore" },
 		{
 			name: "description",
 			content: "Completa il tuo ordine: dati di spedizione, fatturazione e pagamento sicuro."
 		},
 		{
 			property: "og:title",
-			content: "Checkout sicuro — Notte"
+			content: "Checkout sicuro — PitStore"
 		},
 		{
 			property: "og:description",
@@ -656,18 +656,18 @@ var Route$3 = createFileRoute("/checkout")({
 var $$splitComponentImporter$2 = () => import("./contatti-C7GDHDFh.mjs");
 var Route$2 = createFileRoute("/contatti")({
 	head: () => ({ meta: [
-		{ title: "Contatti — Notte lampade da comodino" },
+		{ title: "Contatti — PitStore lampade da comodino" },
 		{
 			name: "description",
 			content: "Scrivici per consigli sull'illuminazione, ordini, spedizioni o resi. Rispondiamo entro 24 ore lavorative."
 		},
 		{
 			property: "og:title",
-			content: "Contatti — Notte"
+			content: "Contatti — PitStore"
 		},
 		{
 			property: "og:description",
-			content: "Assistenza e consulenza sulle lampade da notte."
+			content: "Assistenza e consulenza sulle lampade da PitStore."
 		}
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
@@ -676,14 +676,14 @@ var $$splitComponentImporter$1 = () => import("./ordine-confermato-2HlpYxLx.mjs"
 var Route$1 = createFileRoute("/ordine-confermato")({
 	validateSearch: (search) => ({ numero: typeof search["numero"] === "string" ? search["numero"] : "NT-000000" }),
 	head: () => ({ meta: [
-		{ title: "Ordine confermato — Notte" },
+		{ title: "Ordine confermato — PitStore" },
 		{
 			name: "description",
 			content: "Grazie! Il tuo ordine è stato registrato."
 		},
 		{
 			property: "og:title",
-			content: "Ordine confermato — Notte"
+			content: "Ordine confermato — PitStore"
 		},
 		{
 			property: "og:description",
@@ -704,20 +704,20 @@ var Route = createFileRoute("/prodotto/$slug")({
 		return { product };
 	},
 	head: ({ loaderData }) => {
-		if (!loaderData) return { meta: [{ title: "Prodotto non trovato — Notte" }, {
+		if (!loaderData) return { meta: [{ title: "Prodotto non trovato — PitStore" }, {
 			name: "robots",
 			content: "noindex"
 		}] };
 		const { product } = loaderData;
 		return { meta: [
-			{ title: `${product.name} — Notte` },
+			{ title: `${product.name} — PitStore` },
 			{
 				name: "description",
 				content: product.description.slice(0, 155)
 			},
 			{
 				property: "og:title",
-				content: `${product.name} — Notte`
+				content: `${product.name} — PitStore`
 			},
 			{
 				property: "og:description",

@@ -27,7 +27,7 @@ type CartContextValue = {
 };
 
 const CartContext = createContext<CartContextValue | null>(null);
-const STORAGE_KEY = "notte-cart";
+const STORAGE_KEY = "PitStore-cart";
 
 const lineKey = (slug: string, variantId?: string) => `${slug}::${variantId ?? ""}`;
 

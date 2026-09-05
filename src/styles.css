@@ -150,7 +150,6 @@
 
 @utility surface-card {
   background: var(--color-card);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-2xl);
   box-shadow: var(--shadow-card);
 }

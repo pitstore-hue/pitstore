@@ -7,16 +7,17 @@ import { products } from "@/lib/products";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Notte — Lampade da comodino di design" },
+      { title: "PitStore — Lampade da comodino di design" },
       {
         name: "description",
         content:
-          "Lampade da notte per comodino: ceramica, ottone, legno e vetro. Spedizione gratuita da 100 €, pagamento con carta e PayPal.",
+          "Lampada da notte per comodino e scrivania. Spedizione gratuita da 40 €, pagamento con carta, Apple Pay, Google Pay e PayPal.",
       },
-      { property: "og:title", content: "Notte — Lampade da comodino di design" },
+      { property: "og:title", content: "PitStore — Lampade da comodino di design" },
       {
         property: "og:description",
-        content: "Luce calda per le tue serate. Lampade da comodino disegnate in Italia.",
+        content:
+          "Lampada da notte per comodino e scrivania. Spedizione gratuita da 40 €, pagamento con carta, Apple Pay, Google Pay e PayPal.",
       },
     ],
   }),

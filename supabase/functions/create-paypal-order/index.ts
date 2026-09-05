@@ -93,7 +93,7 @@ serve(async (req) => {
           },
         ],
         application_context: {
-          brand_name: "Notte",
+          brand_name: "PitStore",
           user_action: "PAY_NOW",
           return_url: `${origin}/pagamento-paypal?numero=${encodeURIComponent(numero_ordine)}`,
           cancel_url: `${origin}/checkout?pagamento=annullato`,

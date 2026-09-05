@@ -511,7 +511,7 @@ export function SiteFooter() {
           </a>
         </p>
         <p className="text-xs">
-          © {new Date().getFullYear()} PitStore — Spedizione gratuita. Reso entro 14 giorni.
+          © {new Date().getFullYear()} PitStore — Spedizione gratuita da 40€. Reso entro 14 giorni.
         </p>
       </div>
 

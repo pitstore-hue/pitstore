@@ -5,23 +5,13 @@ import proiettoreGallery02 from "@/assets/proiettore-gallery-02.png";
 import proiettoreGallery03 from "@/assets/proiettore-gallery-03.png";
 import proiettoreGallery04 from "@/assets/proiettore-gallery-04.png";
 
-import dragonBallRef from "@/assets/dragon-ball-cornice-ref.png";
-import dragonBallVar01 from "@/assets/dragon-ball-var-01.png";
-import dragonBallVar02 from "@/assets/dragon-ball-var-02.png";
-import dragonBallVar03 from "@/assets/dragon-ball-var-03.png";
-import dragonBallVar04 from "@/assets/dragon-ball-var-04.png";
-import dragonBallVar05 from "@/assets/dragon-ball-var-05.png";
-import dragonBallVar06 from "@/assets/dragon-ball-var-06.png";
-import dragonBallVar07 from "@/assets/dragon-ball-var-07.png";
-import dragonBallVar08 from "@/assets/dragon-ball-var-08.png";
-import dragonBallVar09 from "@/assets/dragon-ball-var-09.png";
-import dragonBallVar10 from "@/assets/dragon-ball-var-10.png";
-import dragonBallVar11 from "@/assets/dragon-ball-var-11.png";
-import dragonBallVar12 from "@/assets/dragon-ball-var-12.png";
-import dragonBallGallery01 from "@/assets/dragon-ball-gallery-01.png";
-import dragonBallGallery02 from "@/assets/dragon-ball-gallery-02.png";
-import dragonBallGallery03 from "@/assets/dragon-ball-gallery-03.png";
-import dragonBallGallery04 from "@/assets/dragon-ball-gallery-04.png";
+import cuboLedCover from "@/assets/cubo-led-cover.png";
+import cuboLedVarAssemblato from "@/assets/cubo-led-var-assemblato.png";
+import cuboLedVarKit from "@/assets/cubo-led-var-kit.png";
+import cuboLedGallery01 from "@/assets/cubo-led-gallery-01.png";
+import cuboLedGallery02 from "@/assets/cubo-led-gallery-02.png";
+import cuboLedGallery03 from "@/assets/cubo-led-gallery-03.png";
+import cuboLedGallery04 from "@/assets/cubo-led-gallery-04.png";
 
 import flameDiffuserRef from "@/assets/flame-diffuser-ref.png";
 import flameDiffuserNero from "@/assets/flame-diffuser-nero.png";
@@ -92,37 +82,41 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "cornice-dragon-ball",
-    name: "Cornice Luminosa Dragon Ball",
-    price: 38.85,
-    image: dragonBallRef,
-    gallery: [dragonBallGallery01, dragonBallGallery02, dragonBallGallery03, dragonBallGallery04],
-    category: "Cornici luminose",
-    tagline: "Quadro con luce LED, si accende come una vera trasformazione",
+    slug: "cubo-led-infinity-tunnel",
+    name: "Cubo LED Infinity Effetto Tunnel 4D",
+    price: 53.99,
+    image: cuboLedCover,
+    gallery: [cuboLedGallery01, cuboLedGallery02, cuboLedGallery03, cuboLedGallery04],
+    category: "Cubi LED",
+    tagline: "Cubo luminoso con effetto tunnel infinito 4D, disponibile assemblato o in kit fai-da-te",
     description:
-      "Cornice fotografica con illuminazione LED integrata: da spenta è un'illustrazione in bianco e nero o a colori tenui, da accesa si trasforma in una scena luminosa a effetto con luce LED. Perfetta come lampada da comodino o scrivania per chi ama Dragon Ball, e come idea regalo per veri appassionati. Disponibile in 12 grafiche diverse dedicate ai personaggi più iconici della serie.",
+      "Cubo decorativo con struttura a LED che crea un affascinante effetto tunnel infinito, ideale come lampada d'atmosfera per comodino, scrivania o postazione gaming. Disponibile già assemblato e pronto all'uso, oppure in versione kit fai-da-te per chi ama montare i propri progetti: un'esperienza di assemblaggio semplice e divertente, con tutti i componenti inclusi. Alimentazione tramite USB, luce bianca intensa e design moderno in acrilico trasparente.",
     specs: [
-      "Effetto 'off/on': l'immagine cambia quando la luce si accende",
-      "Si accende con un semplice interruttore",
-      "12 grafiche Dragon Ball disponibili",
-      "Ottima come lampada da comodino",
-      "Ottima come idea regalo per fan anime",
+      "Effetto tunnel infinito 4D con struttura a LED",
+      "Alimentazione USB, luce bianca",
+      "Disponibile assemblato o in kit fai-da-te da montare",
+      "Struttura in acrilico trasparente, design moderno",
+      "Ottimo come lampada d'atmosfera da comodino o scrivania",
     ],
     badge: "Novità",
-    variantLabel: "Grafica",
+    variantLabel: "Versione",
     variants: [
-      { id: "01", label: "01", price: 38.85, oldPrice: 44.99, image: dragonBallVar01 },
-      { id: "02", label: "02", price: 38.35, oldPrice: 44.99, image: dragonBallVar02 },
-      { id: "03", label: "03", price: 38.65, oldPrice: 44.99, image: dragonBallVar03 },
-      { id: "04", label: "04", price: 38.45, oldPrice: 44.99, image: dragonBallVar04 },
-      { id: "05", label: "05", price: 38.45, oldPrice: 44.99, image: dragonBallVar05 },
-      { id: "06", label: "06", price: 38.35, oldPrice: 44.99, image: dragonBallVar06 },
-      { id: "07", label: "07", price: 38.35, oldPrice: 44.99, image: dragonBallVar07 },
-      { id: "08", label: "08", price: 38.95, oldPrice: 44.99, image: dragonBallVar08 },
-      { id: "09", label: "09", price: 38.35, oldPrice: 44.99, image: dragonBallVar09 },
-      { id: "10", label: "10", price: 38.75, oldPrice: 44.99, image: dragonBallVar10 },
-      { id: "11", label: "11", price: 38.65, oldPrice: 44.99, image: dragonBallVar11 },
-      { id: "12", label: "12", price: 38.35, oldPrice: 44.99, image: dragonBallVar12 },
+      {
+        id: "assemblato",
+        label: "Assemblato",
+        price: 53.99,
+        oldPrice: 65,
+        note: "Risparmi 11,01 €",
+        image: cuboLedVarAssemblato,
+      },
+      {
+        id: "kit-fai-da-te",
+        label: "Kit fai-da-te",
+        price: 34.99,
+        oldPrice: 50,
+        note: "Risparmi 15,00 €",
+        image: cuboLedVarKit,
+      },
     ],
   },
   {

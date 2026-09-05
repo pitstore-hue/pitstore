@@ -15,15 +15,15 @@ export const Route = createFileRoute("/prodotto/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Prodotto non trovato — Notte" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Prodotto non trovato — PitStore" }, { name: "robots", content: "noindex" }],
       };
     }
     const { product } = loaderData;
     return {
       meta: [
-        { title: `${product.name} — Notte` },
+        { title: `${product.name} — PitStore` },
         { name: "description", content: product.description.slice(0, 155) },
-        { property: "og:title", content: `${product.name} — Notte` },
+        { property: "og:title", content: `${product.name} — PitStore` },
         { property: "og:description", content: product.tagline },
       ],
     };

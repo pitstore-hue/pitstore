@@ -64,7 +64,7 @@ export function ProductCard({
 
   return (
     <article className="surface-card group flex h-full flex-col overflow-hidden">
-      <div className="group/image relative aspect-square overflow-hidden bg-secondary">
+      <div className="group/image relative aspect-square overflow-hidden rounded-t-2xl bg-secondary">
         <Link
           to="/prodotto/$slug"
           params={{ slug: product.slug }}
@@ -76,7 +76,7 @@ export function ProductCard({
             loading="lazy"
             width={900}
             height={900}
-            className="size-full object-cover transition-transform duration-700 group-hover:scale-105"
+            className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </Link>
 

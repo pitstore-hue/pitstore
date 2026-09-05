@@ -9,14 +9,14 @@ import { sendContactMessage } from "@/lib/contact.functions";
 export const Route = createFileRoute("/contatti")({
   head: () => ({
     meta: [
-      { title: "Contatti — Notte lampade da comodino" },
+      { title: "Contatti — PitStore lampade da comodino" },
       {
         name: "description",
         content:
           "Scrivici per consigli sull'illuminazione, ordini, spedizioni o resi. Rispondiamo entro 24 ore lavorative.",
       },
-      { property: "og:title", content: "Contatti — Notte" },
-      { property: "og:description", content: "Assistenza e consulenza sulle lampade da notte." },
+      { property: "og:title", content: "Contatti — PitStore" },
+      { property: "og:description", content: "Assistenza e consulenza sulle lampade da PitStore." },
     ],
   }),
   component: Contatti,

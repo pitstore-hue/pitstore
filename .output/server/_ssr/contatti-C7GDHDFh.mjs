@@ -110,7 +110,7 @@ function Contatti() {
 					children: [[
 						{
 							icon: Mail,
-							label: "ciao@notte-lampade.it"
+							label: "ciao@pitstore.it"
 						},
 						{
 							icon: Phone,
