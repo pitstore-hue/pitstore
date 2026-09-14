@@ -1,5 +1,5 @@
 import { createFileRoute, notFound, Link } from "@tanstack/react-router";
-import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useCart } from "@/lib/cart";
@@ -38,6 +38,7 @@ function ProductPage() {
   const [qty, setQty] = useState(1);
   const [galleryIndex, setGalleryIndex] = useState(0);
   const [imageMode, setImageMode] = useState<"gallery" | "variant">("gallery");
+  const [videoPlaying, setVideoPlaying] = useState(false);
 
   const variants = product.variants ?? [];
   const selectedVariant = variants.find((v) => v.id === variantId);
@@ -55,6 +56,7 @@ function ProductPage() {
     if (imageMode === "variant") {
       setImageMode("gallery");
       setGalleryIndex(0);
+      setVideoPlaying(false);
       return;
     }
     setGalleryIndex((i) => (i + dir + gallery.length) % gallery.length);
@@ -63,6 +65,7 @@ function ProductPage() {
   const selectVariant = (id: string) => {
     setVariantId(id);
     setImageMode("variant");
+    setVideoPlaying(false);
     // Solo su mobile: riporta lo schermo all'inizio della pagina quando si cambia
     // variante, e solo nella pagina di dettaglio prodotto (non nelle card del catalogo).
     if (typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches) {
@@ -94,13 +97,28 @@ function ProductPage() {
             </Link>
 
             <div className="group/image relative aspect-square overflow-hidden rounded-3xl bg-secondary">
-              <img
-                src={displayImage}
-                alt={product.name}
-                width={900}
-                height={900}
-                className="size-full object-cover"
-              />
+              {imageMode === "variant" && selectedVariant?.video && videoPlaying ? (
+                <video
+                  key={selectedVariant.id}
+                  src={selectedVariant.video}
+                  controls
+                  controlsList="nofullscreen"
+                  disablePictureInPicture
+                  muted
+                  autoPlay
+                  playsInline
+                  onEnded={() => setVideoPlaying(false)}
+                  className="size-full object-cover"
+                />
+              ) : (
+                <img
+                  src={displayImage}
+                  alt={product.name}
+                  width={900}
+                  height={900}
+                  className="size-full object-cover"
+                />
+              )}
 
               {gallery.length > 1 && (
                 <>
@@ -121,6 +139,20 @@ function ProductPage() {
                     <ChevronRight className="size-5" />
                   </button>
                 </>
+              )}
+
+              {/* Bottone play centrale, sotto le frecce (z-10 < z-20) cosi ai lati
+                  restano sempre cliccabili. Visibile solo quando la variante ha un video
+                  e non e ancora in riproduzione: si riparte sempre da capo. */}
+              {imageMode === "variant" && selectedVariant?.video && !videoPlaying && (
+                <button
+                  type="button"
+                  aria-label="Guarda il video del prodotto"
+                  onClick={() => setVideoPlaying(true)}
+                  className="absolute left-1/2 top-1/2 z-10 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/40 bg-black/55 text-white transition-transform duration-200 hover:scale-105 hover:bg-black/70"
+                >
+                  <Play className="size-6 translate-x-[2px] fill-white" />
+                </button>
               )}
             </div>
           </div>

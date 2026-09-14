@@ -29,6 +29,8 @@ export type Variant = {
   oldPrice?: number;
   note?: string;
   image?: string;
+  /** URL del video di questa variante (es. /videos/nome-file.mp4 in /public), mostrato come overlay al posto della foto quando si preme play. */
+  video?: string;
 };
 
 export type Product = {
@@ -84,7 +86,7 @@ export const products: Product[] = [
   {
     slug: "cubo-led-infinity-tunnel",
     name: "Cubo LED Infinity Effetto Tunnel 4D",
-    price: 53.99,
+    price:54.99,
     image: cuboLedCover,
     gallery: [cuboLedGallery01, cuboLedGallery02, cuboLedGallery03, cuboLedGallery04],
     category: "Cubi LED",
@@ -104,18 +106,20 @@ export const products: Product[] = [
       {
         id: "assemblato",
         label: "Assemblato",
-        price: 53.99,
-        oldPrice: 65,
-        note: "Risparmi 11,01 €",
+        price: 54.99,
+        oldPrice: 79.99,
+        note: "Risparmi 25,00 €",
         image: cuboLedVarAssemblato,
+        video: "/videos/cubo-led-infinity-tunnel.mp4",
       },
       {
         id: "kit-fai-da-te",
         label: "Kit fai-da-te",
         price: 34.99,
-        oldPrice: 50,
-        note: "Risparmi 15,00 €",
+        oldPrice: 54.99,
+        note: "Risparmi 20,00 €",
         image: cuboLedVarKit,
+        video: "/videos/cubo-led-kit-fai-da-te.mp4",
       },
     ],
   },
